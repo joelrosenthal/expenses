@@ -7,7 +7,9 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
+// phpcs:disable
 define('LARAVEL_START', microtime(true));
+// phpcs:enable
 
 /*
 |--------------------------------------------------------------------------

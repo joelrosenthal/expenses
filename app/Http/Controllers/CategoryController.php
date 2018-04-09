@@ -16,8 +16,27 @@ class CategoryController extends Controller
     {
         return response(
             [
-                'data' => Category::all()->toArray()
+                'data' => Category::all()->toArray(),
             ]
         );
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
+    public function store()
+    {
+        $fields = $this->validate(
+            request(),
+            [
+                'name' => 'required',
+            ]
+        );
+
+        $category = Category::create($fields);
+
+        return response(['data' => $category], 201);
     }
 }

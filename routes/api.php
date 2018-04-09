@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/categories', 'CategoryController@index')->name('categories.index');
+Route::middleware('auth:api')->group(function () {
+    Route::get('/categories', 'CategoryController@index')->name('categories.index');
+    Route::post('/categories', 'CategoryController@store')->name('categories.store');
+});

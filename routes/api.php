@@ -11,7 +11,8 @@
 |
 */
 
+use App\Http\Controllers\CategoryController;
+
 Route::middleware('auth:api')->group(function () {
-    Route::get('/categories', 'CategoryController@index')->name('categories.index');
-    Route::post('/categories', 'CategoryController@store')->name('categories.store');
+    Route::apiResource('categories', 'CategoryController');
 });

@@ -15,4 +15,5 @@ use App\Http\Controllers\CategoryController;
 
 Route::middleware('auth:api')->group(function () {
     Route::apiResource('categories', 'CategoryController');
+    Route::apiResource('subcategories', 'SubcategoryController');
 });

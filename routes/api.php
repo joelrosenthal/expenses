@@ -17,4 +17,5 @@ Route::middleware('auth:api')->group(function () {
     Route::apiResource('categories', 'CategoryController');
     Route::apiResource('subcategories', 'SubcategoryController');
     Route::apiResource('sources', 'SourceController');
+    Route::apiResource('expenditures', 'ExpenditureController');
 });

@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Joel Rosenthal',
                 'email' => 'joel.rosenthal@gmail.com',
                 'password' => bcrypt('password'),
+                'remember_token' => 'IgK45nyBmzct08Cm3FzURKsnAkliTi5f62jwuqYdp6KuamNzIOL6Kk2redib',
             ]
         );
     }

@@ -35,4 +35,23 @@ class Category extends Model
     protected $hidden = [
         'deleted_at',
     ];
+
+    /**
+     * The relations to eager load on every query.
+     *
+     * @var array
+     */
+    protected $with = [
+        'subcategories',
+    ];
+
+    /**
+     * A category has subcategories
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function subcategories()
+    {
+        return $this->hasMany(Subcategory::class);
+    }
 }

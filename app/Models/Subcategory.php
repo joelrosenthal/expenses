@@ -37,4 +37,14 @@ class Subcategory extends Model
     protected $hidden = [
         'deleted_at',
     ];
+
+    /**
+     * A subcategory belongs to a category
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

@@ -18,6 +18,10 @@ class CategoryTest extends TestCase
     {
         $categories = factory(Category::class, 3)->create();
 
+        $categories = Category::with('subcategories')
+                                    ->whereIn('id', $categories->pluck('id'))
+                                    ->get();
+
         $response = $this->get(route('categories.index'));
 
         $response->assertJsonFragment(

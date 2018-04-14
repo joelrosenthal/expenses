@@ -16,6 +16,8 @@
 
                     You are logged in!
                 </div>
+                <expenditure-form expenditure_id="1"></expenditure-form>
+                {{--<expenditure-form ></expenditure-form>--}}
             </div>
         </div>
     </div>

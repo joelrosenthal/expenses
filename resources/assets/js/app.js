@@ -6,8 +6,17 @@
  */
 
 require('./bootstrap');
-
 window.Vue = require('vue');
+
+var moment = require('moment');
+Vue.prototype.moment = moment;
+
+import ElementUI from 'element-ui';
+import locale from 'element-ui/lib/locale/lang/en'
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI, { locale });
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,7 +24,7 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('expenditure-form', require('./components/ExpenditureForm'));
 Vue.component(
     'passport-clients',
     require('./components/passport/Clients.vue')

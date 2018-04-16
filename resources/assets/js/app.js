@@ -17,6 +17,16 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI, { locale });
 
+import Vuetable from 'vuetable-2';
+Vue.use(Vuetable);
+
+Vue.component("vuetable", Vuetable);
+/*Vue.component("vuetable-pagination", VueTablePagination);
+Vue.component("vuetable-pagination-dropdown", VueTablePaginationDropDown);
+Vue.component("vuetable-pagination-info", VueTablePaginationInfo);*/
+
+var moment = require('moment');
+Vue.prototype.moment = moment;
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -25,6 +35,8 @@ Vue.use(ElementUI, { locale });
  */
 
 Vue.component('expenditure-form', require('./components/ExpenditureForm'));
+Vue.component('expenditure-table', require('./components/ExpenditureTable'));
+
 Vue.component(
     'passport-clients',
     require('./components/passport/Clients.vue')

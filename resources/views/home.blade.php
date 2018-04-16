@@ -10,7 +10,6 @@
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
-                            {{ session('status') }}
                         </div>
                     @endif
 
@@ -20,6 +19,7 @@
                 {{--<expenditure-form ></expenditure-form>--}}
             </div>
         </div>
+        <expenditure-table></expenditure-table>
     </div>
 </div>
 @endsection
